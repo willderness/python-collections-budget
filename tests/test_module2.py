@@ -18,7 +18,7 @@ def test_task1_module2():
     class_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     class_found = True
@@ -26,7 +26,7 @@ def test_task1_module2():
     except Exception as e:
             pass
     
-    assert path.exists('BudgetList.py'), 'Did you create a file named `BudgetList.py` ?'
+    assert path.exists('budget/BudgetList.py'), 'Did you create a file named `BudgetList.py` in the `budget/` folder?'
     assert class_found, 'Did you create a `class BudgetList` in `BudgetList.py`?'
 
 
@@ -41,7 +41,7 @@ def test_task2_module2():
     overages_assign_found = False
 
     try:
-         for x in load_ast_tree('BudgetList.py').body:
+         for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -75,7 +75,7 @@ def test_task3_module2():
     append_def_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -108,7 +108,7 @@ def test_task4_module2():
     exp_append_item_found = False
     
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -166,7 +166,7 @@ def test_task5_module2():
     over_append_item_found = False
     
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -201,7 +201,7 @@ def test_task6_module2():
     len_def_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -223,7 +223,7 @@ def test_task7_module2():
     main_func_found = False
     budgetlist_assign_found = False
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 main_func_found = True
@@ -252,7 +252,7 @@ def test_task9_module2():
     read_expenses_call_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -261,7 +261,7 @@ def test_task9_module2():
                     
                     if 'expenses:Expense:Expenses' in assignments:
                         expenses_assign_found = True
-                    if 'expenses:read_expenses:spending_data.csv' in calls:
+                    if 'expenses:read_expenses:data/spending_data.csv' in calls:
                         read_expenses_call_found = True
 
     except Exception as e:
@@ -269,7 +269,7 @@ def test_task9_module2():
             pass
 
     assert expenses_assign_found, 'Did you define an `expenses` variable assigned to `Expense.Expenses()`?'
-    assert read_expenses_call_found, 'Did you call `read_expenses(\'spending_data.csv\')` on `expenses`?'
+    assert read_expenses_call_found, 'Did you call `read_expenses(\'data/spending_data.csv\')` on `expenses`?'
 
 # Append expenses
 @pytest.mark.test_task10_module2
@@ -279,7 +279,7 @@ def test_task10_module2():
     append_call_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -305,7 +305,7 @@ def test_task11_module2():
     print_call_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:

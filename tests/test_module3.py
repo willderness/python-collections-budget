@@ -18,7 +18,7 @@ def test_task1_module3():
     iter_def_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -41,7 +41,7 @@ def test_task2_module3():
     self_return_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -73,7 +73,7 @@ def test_task3_module3():
     next_def_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -97,7 +97,7 @@ def test_task4_module3():
     iter_o_next_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if isinstance(x, ast.ClassDef):
                 if x.name == 'BudgetList':
                     for y in x.body:
@@ -136,7 +136,7 @@ def test_task5_module3():
     print_call_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
              if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -168,7 +168,7 @@ def test_task7_module3():
     plt_subplots_call_found = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -197,7 +197,7 @@ def test_task8_module3():
     correct_labels = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -224,7 +224,7 @@ def test_task9_module3():
     correct_values = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -254,7 +254,7 @@ def test_task10_module3():
     correct_values = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -284,7 +284,7 @@ def test_task11_module3():
     correct_value = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:
@@ -314,7 +314,7 @@ def test_task12_module3():
     correct_value = False
 
     try:
-        for x in load_ast_tree('BudgetList.py').body:
+        for x in load_ast_tree('budget/BudgetList.py').body:
             if (isinstance(x, ast.FunctionDef) and
                     x.name == 'main'):
                 for y in x.body:

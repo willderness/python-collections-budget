@@ -8,14 +8,14 @@ from os import path
 # import Expense
 @pytest.mark.test_task1_module1
 def test_task1_module1():
-    assert path.exists('UsingCounter.py'), 'Did you create a file named `UsingCounter.py` ?'
+    assert path.exists('budget/UsingCounter.py'), 'Did you create a file named `UsingCounter.py` ?'
     assert 'Expense' in dir(UsingCounter), 'Have you imported the built-in `collections` library?'
 
 # expenses = Expense.Expenses()
 @pytest.mark.test_task2_module1
 def test_task2_module1():
     assert 'expenses:Expense:Expenses' in get_assignments(UsingCounter), 'Do you have a `Expense.Expenses()` constructor call?'
-    assert 'expenses:read_expenses:spending_data.csv' in get_calls(UsingCounter), 'Are you calling the `read_expenses()` method with `"spending_data.csv"`?'
+    assert 'expenses:read_expenses:data/spending_data.csv' in get_calls(UsingCounter), 'Are you calling the `read_expenses()` method with `"data/spending_data.csv"`?'
 
 # spending_categories = []
 @pytest.mark.test_task3_module1
