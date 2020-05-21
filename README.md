@@ -16,7 +16,7 @@
 ## Count Purchases by Category
 ### Verify module: 
     To run tests run: pytest -k "module1" -s
-    To run the file: python -m budget.UsingCounter.py
+    To run the file: python -m budget.UsingCounter
 1. ### Import the Expense Module
 
     Last month’s spending data is in  `data/spending_data.csv`, which is a spreadsheet with 3 columns for - Location, Category, and amount. For example, the first row contains: `Alaska Air,Travel,-$115.75`. We want to analyze our spending habits in a few different ways.  In this module, we are going to read in this file and display the categories with the most purchases in a graph. 
@@ -63,7 +63,7 @@
 ## Create the BudgetList class to Display Overage Expenses
 ### Verify module: 
     To run tests run: pytest -k "module2" -s
-    To run the file: python -m budget.BudgetList.py
+    To run the file: python -m budget.BudgetList
 1. ### Create the BudgetList class
    Create a file named `BudgetList.py`. Inside that file, create a class called `BudgetList` with only `pass` inside the class for now.
 
@@ -111,7 +111,7 @@
 ## Finish Making BudgetList an Iterable
 ### Verify module: 
     To run tests run: pytest -k "module3" -s
-    To run the file: python -m budget.BudgetList.py
+    To run the file: python -m budget.BudgetList
 1. ### Create __iter__()
     Next, we want to create an iterator for BudgetList by implementing __iter__() and __next__() to iterate the expenses list first and then continue iterating the overages list. Once those are implemented and you can get an iterator from BudgetList, it will be an iterable. Inside the BudgetList class, at the bottom, define an __iter__ method that has self as a parameter. Put `pass` inside the body of the method for now. 
 
