@@ -23,7 +23,7 @@
 
    To read in the data, we’ll use the classes in the file named Expense.py. There are 2 classes -- Expense (which has a vendor, category, and amount) and Expenses (which has a list of type Expense and a sum of the amounts). Expenses also has a method read_expenses() which we’ll use to read the .csv file.
 
-   To start, create a file named `FrequentExpenses.py` and `import Expense` at the top of the file. 
+   To start, open the file named `FrequentExpenses.py` in the `budget` directory, and add `import Expense` to the top of the file. 
 
 2. ### Read in the Spending Data
    Create a variable named expenses and set it equal to calling the Expenses() constructor. Then call the read_expenses() method on expenses and pass in the name of the file `data/spending_data.csv`. 
@@ -65,7 +65,7 @@
     To run tests run: pytest -k "module2" -s
     To run the file: python -m budget.BudgetList
 1. ### Create the BudgetList class
-   Create a file named `BudgetList.py`. Inside that file, create a class called `BudgetList` with only `pass` inside the class for now.
+   In the `budget` directory, open the `BudgetList.py` file. Inside that file, create a class called `BudgetList` with only `pass` inside the class for now.
 
 2. ### Create the constructor
    Replace `pass` with a constructor that has two parameters - `self, budget`. Then initialize the following class variables: 
