@@ -1,7 +1,7 @@
 import pytest
 import ast
 from tests import utils
-
+from budget import ExpenseCategories
 
 def load_ast_tree(filename):
         try:
@@ -143,3 +143,42 @@ def test_task5_module4():
             pass
 
     assert return_found, 'Did you return `[necessary_expenses, food_expenses, unnecessary_expenses]`?'
+
+# Call categorize_set_comprehension
+@pytest.mark.test_task6_module4
+def test_task6_module4():
+    assignments = utils.get_assignments(ExpenseCategories)
+    print("assignments = " + str(assignments))
+    message = 'Did you call `categorize_set_comprehension()` on `expenses` and assign the result to a variabled named `divided_set_comp`?'
+    assert 'divided_set_comp:expenses:categorize_set_comprehension' in assignments, message
+
+# If sets are equal
+@pytest.mark.test_task7_module4
+def test_task7_module4():
+    ifs = utils.get_if_statements(ExpenseCategories)
+    print("ifs = " + str(ifs))
+    message = 'Did you create an `if` statement that checks if `divided_set_comp` and `divided_for_loop` are NOT equal?'
+    assert 'divided_set_comp:divided_for_loop:print:Sets are NOT equal by == test' in ifs, message
+
+# For loop, subset test
+@pytest.mark.test_task8_module4
+def test_task8_module4():
+    fors = utils.get_for_loops(ExpenseCategories)
+    print("fors = " + str(fors))
+    for_loop_found = False
+    for x in fors:
+        if 'a:b:zip:divided_for_loop:divided_set_comp' in x:
+            for_loop_found = True
+
+    message = 'Did you create an `for` loop that uses `a,b` as iterator variables to iterate `zip(divided_for_loop, divided_set_comp)`?'
+    assert for_loop_found, message
+
+# For loop, subset test
+@pytest.mark.test_task9_module4
+def test_task9_module4():
+    fors = utils.get_for_loops(ExpenseCategories)
+    print("fors = " + str(fors))
+
+    for_str = 'a:b:zip:divided_for_loop:divided_set_comp:a:issubset:b:b:issubset:a:print:Sets are NOT equal by subset test'
+    message = 'Did you create an `for` loop that uses `a,b` as iterator variables to iterate `zip(divided_for_loop, divided_set_comp)`?'
+    assert for_str in fors, message
