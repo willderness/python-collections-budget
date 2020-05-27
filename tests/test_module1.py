@@ -29,7 +29,7 @@ def test_spending_categories_init_module1():
     assert target_id_bool and iter_value_id_bool and iter_attr_bool, message
 
     body_bool = get_for_loops(FrequentExpenses, 'dict')[0]['body'] == 'spending_categories:append:expense:category'
-    message = 'Did you call `spendingCategories.append()` with `expense.category` inside the for loop?'
+    message = 'Did you call `spending_categories.append()` with `expense.category` inside the for loop?'
     assert body_bool, message
 
 # import collections
