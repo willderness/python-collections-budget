@@ -36,7 +36,7 @@ def test_spending_categories_init_module1():
 @pytest.mark.test_task4_module1
 def test_task4_module1():
     assert 'collections' in dir(FrequentExpenses), 'Have you imported the built-in `collections` library?'
-    assert 'spending_counter:collections:Counter:spending_categories' in get_assignments(FrequentExpenses), 'Did you call `collections.Counter()` with argument `spendingCategories` and assign to `spendingCounter`?'
+    assert 'spending_counter:collections:Counter:spending_categories' in get_assignments(FrequentExpenses), 'Did you call `collections.Counter()` with argument `spending_categories` and assign to `spending_counter`?'
 
 # top5 = spending_counter.most_common(5)
 @pytest.mark.test_task5_module1
