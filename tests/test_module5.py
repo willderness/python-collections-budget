@@ -113,8 +113,8 @@ def test_task6_module5():
 
 
 # Assign labels []
-@pytest.mark.test_task7_module3
-def test_task7_module3():
+@pytest.mark.test_task7_module5
+def test_task7_module5():
 
     assign_labels_found = False
     correct_labels = False
