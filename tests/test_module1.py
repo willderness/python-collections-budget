@@ -19,7 +19,7 @@ def test_task2_module1():
 
 # spending_categories = []
 @pytest.mark.test_task3_module1
-def test_spending_categories_init_module1():
+def test_task3_module1():
     assert 'spending_categories' in get_assignments(FrequentExpenses), 'Are you initializing `spending_categories` to an empty list?'
 
     target_id_bool = get_for_loops(FrequentExpenses, 'dict')[0]['target:id'] == 'expense'
