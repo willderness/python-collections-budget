@@ -274,7 +274,7 @@ def test_task10_module3():
             pass
 
     assert ax_bar_found, 'Did you call `ax.bar()`?'
-    assert correct_values, 'Did you call `ax.bar()` with the following parameters: `labels, values, color=\'grb\'`?'
+    assert correct_values, "Did you call `ax.bar()` with the following parameters: `labels, values, color=['green','red','blue']`?"
 
 # Call ax.set_title()
 @pytest.mark.test_task11_module3
