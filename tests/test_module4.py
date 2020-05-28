@@ -158,7 +158,9 @@ def test_task7_module4():
     ifs = utils.get_if_statements(ExpenseCategories)
     print("ifs = " + str(ifs))
     message = 'Did you create an `if` statement that checks if `divided_set_comp` and `divided_for_loop` are NOT equal?'
-    assert 'divided_set_comp:divided_for_loop:print:Sets are NOT equal by == test' in ifs, message
+    if_found = ('divided_set_comp:divided_for_loop:print:Sets are NOT equal by == test' in ifs or 
+                'divided_for_loop:divided_set_comp:print:Sets are NOT equal by == test' in ifs)
+    assert if_found, message
 
 # For loop, subset test
 @pytest.mark.test_task8_module4
