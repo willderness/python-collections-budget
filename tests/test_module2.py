@@ -297,7 +297,7 @@ def test_task10_module2():
             pass
     
     assert for_expenses_found, 'Did you create a for loop that iterates `expenses.list`?'
-    assert append_call_found, 'Did you call `append(n.amount)` on `myBudgetList`?'
+    assert append_call_found, 'Did you call `append(expense.amount)` on `myBudgetList`?'
 
 # Print length of BudgetList
 @pytest.mark.test_task11_module2
