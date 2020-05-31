@@ -31,7 +31,7 @@ def convert_ast(node, return_type='string', include_type=False, sep=':'):
     def _format(node):
         nonlocal count
         if isinstance(node, ast.AST):
-            d = _flatten_dict({ key: _format(value) for key, value in ast.iter_fields(node) if key != 'ctx'})
+            d = _flatten_dict({ key: _format(value) for key, value in ast.iter_fields(node) if key != 'ctx' and key != 'type_comment' and key != 'kind'})
 
             if include_type:
                 d['type'] = node.__class__.__name__
